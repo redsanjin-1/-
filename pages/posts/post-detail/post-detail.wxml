@@ -1,0 +1,17 @@
+<image class="post-img" src="{{postData.imgSrc}}"></image>
+<view class='container'>
+  <view class='profile'>
+    <image class='profile-img' src="{{postData.avatar}}"></image>
+    <text class='author'>{{postData.author}}</text>
+    <text class='dateTime-wrapper'>发表于<text class='dateTime'>{{postData.dateTime}}</text></text>
+  </view> 
+  <view class='title'>{{postData.title}}</view>
+  <view class='icon-group'>
+    <view class='line'></view>  
+    <image class='icon-collection' src="{{iconCollection}}" catchtap='tapIconCollection'></image>
+    <image class='icon-share' src="/images/icon/share.png" catchtap='postShare'></image>
+  </view>
+  <view class='post-detail'>
+    <text>{{postData.detail}}</text>
+  </view>
+</view>

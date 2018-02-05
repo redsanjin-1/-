@@ -1,0 +1,7 @@
+<view class='container'>
+  <image class='profile' src='/images/avatar/1.png'></image>
+  <text class='title'>hello,sanjin</text>
+  <view class='btn-start-wrapper' catchtap='start'>
+    <text class='btn-start'>start</text>
+  </view>
+</view>

@@ -1,0 +1,10 @@
+@import "post-item/post-item-tpl.wxss";
+
+.container{
+  background-color: #f8f8f8;
+}
+.slide-wrapper,
+.slide-image{
+  width:100%;
+  height:400rpx;
+}

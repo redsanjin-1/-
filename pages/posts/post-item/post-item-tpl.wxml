@@ -1,0 +1,19 @@
+<template name='postItem'>
+  <view class="post-item">
+    <view class='profile'>
+      <image class='profile-img' src='{{avatar}}'></image>
+      <text class='date'>{{date}}</text>
+    </view>
+    <text class='title'>{{title}}</text>
+    <image class='post-img' src="{{imgSrc}}"></image>
+    <view class='content-wrapper'>
+      <text class='content'>{{content}}</text>
+    </view>
+    <view class='info'>
+      <image class='info-img' src="/images/icon/chat.png"></image>
+      <text class='collection'>{{collection}}</text>
+      <image class='info-img' src="/images/icon/view.png"></image>
+      <text class='reading'>{{reading}}</text>
+    </view>
+  </view>
+</template>
