@@ -1,0 +1,10 @@
+<template name="starsTpl">
+  <view class='star-group'>
+    <image src="/images/icon/star.png"></image>
+    <image src="/images/icon/star.png"></image>
+    <image src="/images/icon/star.png"></image>
+    <image src="/images/icon/star.png"></image>
+    <image src="/images/icon/star.png"></image>
+    <text class='grade'>8.1</text>    
+  </view>
+</template>

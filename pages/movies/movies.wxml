@@ -1,0 +1,7 @@
+<import src="movie-list/movie-list-tpl.wxml" />
+<!-- 正在热映 -->
+<template is="movieListTpl" data="{{...in_theaters}}" wx:if="in_theaters.images.length>0"></template>
+<!-- 即将上映 -->
+<template is="movieListTpl" data="{{...coming_soon}}" wx:if="coming_soon.images.length>0"></template>
+<!-- TOP250 -->
+<template is="movieListTpl" data="{{...top250}}" wx:if="top250.images.length>0"></template>

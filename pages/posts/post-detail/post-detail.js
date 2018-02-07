@@ -57,7 +57,7 @@ Page({
       })
     })
   },
-  // 检查是否正在播放
+  // 检查是否正在播放 (全局变量)
   checkMusicPlaying:function(id){
     if (app.globalData.g_isPlayingMusic && app.globalData.g_currentMusicPostId===id){
       return true
@@ -90,7 +90,7 @@ Page({
       }
     })
   },
-  // 检查是否收藏
+  // 检查是否收藏 (缓存)
   checkCollection: function (id) {
     var self = this;
     wx.getStorage({

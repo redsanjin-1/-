@@ -1,0 +1,16 @@
+.star-group{
+  display: flex;
+  align-items: center;
+  height:18rpx;
+  line-height: 18rpx;
+}
+.star-group image{
+  width:18rpx;
+  height:18rpx;
+  padding-right: 5rpx;
+}
+.star-group .grade{
+  font-size: 22rpx;
+  line-height: 18rpx;
+  margin-left: 20rpx;
+}

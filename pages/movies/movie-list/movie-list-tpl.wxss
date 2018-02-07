@@ -1,0 +1,30 @@
+@import "../movie/movie-tpl.wxss";
+
+.movie-list-wrapper{
+  background-color: #fff;
+  margin-bottom: 20rpx
+}
+.list-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width:100%;
+  padding:20rpx;
+  font-size: 20rpx 26rpx;
+  box-sizing: border-box;
+}
+.list-header .more{
+  color:#2c56aa;
+  font-size: 24rpx;
+}
+.list-header .more .icon-arrow-right{
+  width:8rpx;
+  height:18rpx;
+  margin-left: 2rpx;
+}
+.list-body{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
