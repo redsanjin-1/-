@@ -3,6 +3,6 @@
   <view class='movie-item' data-movie-id="{{movieId}}">
     <image class="movie-img" src="{{images}}"></image>
     <text class='movie-title'>{{title}}</text>
-    <template is="starsTpl" data="{{rating}}"></template>
+    <template is="starsTpl" data="{{average:average,stars:stars}}"></template>
   </view>
 </template>

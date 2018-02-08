@@ -1,0 +1,10 @@
+/* pages/movies/more-movie/more-movie.wxss */
+@import "../movie/movie-tpl.wxss";
+
+.movie-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20rpx 0;
+}

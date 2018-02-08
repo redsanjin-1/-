@@ -3,7 +3,7 @@
   <view class='movie-list-wrapper'>
     <view class='list-header'>
       <text class='list-title'>{{title}}</text>
-      <view class='more'>
+      <view class='more' catchtap='viewMore' data-title="{{title}}">
         更多
         <image src="/images/icon/arrow-right.png" class='icon-arrow-right'></image>
       </view>

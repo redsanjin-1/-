@@ -1,10 +1,9 @@
 <template name="starsTpl">
   <view class='star-group'>
-    <image src="/images/icon/star.png"></image>
-    <image src="/images/icon/star.png"></image>
-    <image src="/images/icon/star.png"></image>
-    <image src="/images/icon/star.png"></image>
-    <image src="/images/icon/star.png"></image>
-    <text class='grade'>8.1</text>    
+    <block wx:for="{{stars}}" wx:for-item="i" wx:key="key">
+      <image wx:if="{{i}}" src="/images/icon/star.png"></image>
+      <image wx:else src="/images/icon/none-star.png"></image>      
+    </block>
+    <text class='grade'>{{average}}</text>    
   </view>
-</template>
+</template>  
