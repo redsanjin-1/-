@@ -1,7 +1,27 @@
 <import src="movie-list/movie-list-tpl.wxml" />
-<!-- 正在热映 -->
-<template is="movieListTpl" data="{{...in_theaters}}" wx:if="in_theaters.images.length>0"></template>
-<!-- 即将上映 -->
-<template is="movieListTpl" data="{{...coming_soon}}" wx:if="coming_soon.images.length>0"></template>
-<!-- TOP250 -->
-<template is="movieListTpl" data="{{...top250}}" wx:if="top250.images.length>0"></template>
+<import src="movie/movie-tpl.wxml" />
+
+<view class='search-wrapper'>
+  <icon type='search' size="18" color="#405f80" class='search-icon'></icon>
+  <input type="text" confirm-type="搜索" placeholder="搜索电影" class="input-search" bindfocus="onInputFocus" bindblur="onInputBlur" bindconfirm="onInputConfirm" value="{{searchValue}}"></input>
+  <icon type="clear" size="18" color="#405f80" class='search-icon' wx:if="{{isSearching}}" catchtap="onCloseSearch"></icon>
+</view>
+<view wx:if="{{!isSearching}}">
+  <!-- 正在热映 -->
+  <template is="movieListTpl" data="{{...in_theaters}}"></template>
+  <!-- 即将上映 -->
+  <template is="movieListTpl" data="{{...coming_soon}}"></template>
+  <!-- TOP250 -->
+  <template is="movieListTpl" data="{{...top250}}"></template>
+</view>
+<!-- 搜索结果盒子 -->
+<view wx:if="{{isSearching}}">
+  <view class='movie-grid' wx:if="{{searchMovies.movies.length>0}}">
+    <block wx:for="{{searchMovies.movies}}" wx:for-item="movie" wx:key="index">
+      <template is="movieTpl" data="{{...movie}}"></template>
+    </block>
+  </view>
+  <view wx:else class='hasNoMovie'>
+    暂无相关电影，请重新搜索
+  </view>
+</view>
