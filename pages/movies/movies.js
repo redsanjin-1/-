@@ -97,7 +97,7 @@ Page({
     })
   },
   // 文章详情页
-  onMovieTap:function(event,options){
+  onMovieTap:function(event){
     var id = event.currentTarget.dataset.movieId;
     wx.navigateTo({
       url: "/pages/movies/movie-detail/movie-detail?id="+id,

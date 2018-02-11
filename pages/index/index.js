@@ -1,6 +1,7 @@
 Page({
   start:function(){
-    wx.navigateTo({
+    // 不能使用 navigateTo , redirectTo
+    wx.switchTab({
       url: '/pages/posts/post',
     })
   }

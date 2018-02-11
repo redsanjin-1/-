@@ -1,2 +1,49 @@
-<!--pages/movies/movie-detail/movie-detail.wxml-->
-<text>pages/movies/movie-detail/movie-detail.wxml</text>
+<import src="../stars/stars-tpl.wxml" />
+<!-- header --> 
+<view class='detail-header'>
+  <view class='blur-cover' style='background: url({{image_post}})'></view>
+  <!-- title -->
+  <view class='movie-title text-overflow'>{{title}}</view>
+  <!-- country,year -->
+  <view class='movie-country-year'>
+    <text class='movie-country'>{{country}}</text>·
+    <text class='movie-year'>{{year}}</text>
+  </view>
+  <!-- likes,comments -->
+  <view class='movie-likes-comments'>
+    <text class='movie-likes-count'>{{ratings_count}}</text>人喜欢
+    <text class='movie-comments-count'>{{comments_count}}</text>条评论
+  </view>
+  <!-- post -->
+  <image class='movie-post' src="{{image_post}}" data-src="{{image_post}}" catchtap="onMoviePostTap"></image>
+</view>
+<!-- info -->
+<view class='movie-info'>
+  <view class='movie-originalTitle'>{{originalTitle}}</view>
+  <view class='movie-stars'>
+    <text class='section-name'>评分</text>
+    <template is='starsTpl' data='{{...stars}}'></template>
+  </view>
+  <view class='movie-directors'>
+    <text class='section-name'>导演</text> {{directors}}
+  </view>
+  <view class='movie-casts'>
+    <text class='section-name'>影人</text> {{casts}}
+  </view>
+  <view class='movie-genres'>
+    <text class='section-name'>类型</text> {{genres}}
+  </view>
+</view>
+<!-- summary -->
+<view class='movie-summary'>
+  <view class='section-name'>剧情简介</view>{{summary}}
+</view>
+<!-- casts-post -->
+<view class='movie-casts-post'>
+  <view class='section-name'>影人</view>
+  <view class='post-body' catchtap='onMovieCastsTap'>
+    <block wx:for="{{castsArr}}" wx:for-item="item" wx:key="index">
+      <image src="{{item.avatar}}" class='casts-avatar' data-src="{{item.avatar}}"></image>
+    </block>
+  </view>
+</view>

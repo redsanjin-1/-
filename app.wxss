@@ -7,3 +7,14 @@ text{
 input{
     font-family: MicroSoft YaHei;
 }
+
+.text-overflow{
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing:border-box;
+}
+
+::-webkit-scrollbar{
+  display:none;
+}

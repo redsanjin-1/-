@@ -1,1 +1,127 @@
-/* pages/movies/movie-detail/movie-detail.wxss */
+@import "../stars/stars-tpl.wxss";
+
+.detail-header {
+  position: relative;
+  background-color: #eee;
+  height:320rpx;
+}
+
+.blur-cover{
+  position: absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  filter: blur(20rpx);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.detail-header .movie-title {
+  position: absolute;
+  top:60rpx;
+  left:45rpx;
+  right:45rpx;
+  font-size: 36rpx;
+  color: #fff;
+}
+
+.detail-header .movie-country-year {
+  position: absolute;
+  top:145rpx;
+  left:45rpx;
+  font-size: 24rpx;
+  color: #fff;
+  margin-bottom: 70rpx;
+}
+
+.detail-header .movie-country {
+  padding-right: 15rpx;
+  color: #fff;
+}
+
+.detail-header .movie-year {
+  padding-left: 15rpx;
+  color: #fff;
+}
+
+.detail-header .movie-likes-comments {
+  position: absolute;
+  top:245rpx;
+  left:45rpx;
+  font-size: 20rpx;
+  padding-bottom: 55rpx;
+  color: #666;
+}
+
+.detail-header .movie-likes-count, .detail-header .movie-comments-count {
+  color: #eb1f4b;
+  padding-right: 18rpx;
+}
+
+.detail-header .movie-comments-count {
+  padding-left: 18rpx;
+}
+
+.detail-header .movie-post {
+  position: absolute;
+  right: 30rpx;
+  bottom: -80rpx;
+  width: 175rpx;
+  height: 235rpx;
+}
+
+.movie-info {
+  padding: 45rpx 0 60rpx 40rpx;
+  font-size: 20rpx;
+  border-bottom: 1px solid #d9d9d9;
+  color: #666;
+}
+
+.movie-info .movie-originalTitle {
+  font-size: 22rpx;
+  font-weight: blod;
+  margin-bottom: 40rpx;
+}
+
+.movie-info .movie-stars, .movie-info .movie-directors, .movie-info .movie-casts,
+.movie-info .movie-genres {
+  line-height: 40rpx;
+}
+
+.movie-info .movie-stars {
+  display: flex;
+  align-items: center;
+}
+
+.movie-summary {
+  padding: 55rpx 40rpx 50rpx 40rpx;
+  line-height: 38rpx;
+  color: #666;
+  border-bottom: 1px solid #d9d9d9;
+  font-size: 20rpx;
+}
+
+.section-name {
+  color: #999;
+  padding-right: 30rpx;
+}
+
+.movie-casts-post {
+  color: #666;
+  padding: 55rpx 45rpx;
+  font-size: 24rpx;
+}
+
+.post-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 45rpx;
+  overflow-y: auto;
+}
+
+.movie-casts-post .casts-avatar {
+  width: 175rpx;
+  height: 235rpx;
+}

@@ -1,6 +1,6 @@
 // pages/movies/more-movie/more-movie.js
 var app = getApp();
-var utils = require("../../../utils/utils.js");
+var utils = require("../../../utils/utils.js"); 
 Page({
   /**
    * 页面的初始数据
@@ -93,5 +93,12 @@ Page({
         title: '没有更多数据',
       })
     }
+  },
+  // 文章详情页
+  onMovieTap: function (event) {
+    var id = event.currentTarget.dataset.movieId;
+    wx.navigateTo({
+      url: "/pages/movies/movie-detail/movie-detail?id=" + id,
+    })
   }
 })

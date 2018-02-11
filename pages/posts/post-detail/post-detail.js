@@ -56,6 +56,11 @@ Page({
         isPlayingMusic:false
       })
     })
+    wx.onBackgroundAudioStop(function(){
+      self.setData({
+        isPlayingMusic: false
+      })
+    })
   },
   // 检查是否正在播放 (全局变量)
   checkMusicPlaying:function(id){
