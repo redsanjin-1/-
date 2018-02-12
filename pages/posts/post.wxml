@@ -1,6 +1,6 @@
 <import src="post-item/post-item-tpl.wxml" />
 <view class='container'>
-  <swiper indicator-dots="true" autoplay="true" class='slide-wrapper'>
+  <swiper indicator-dots="true" autoplay="true" circular="true" class='slide-wrapper'>
     <block wx:for="{{swiperList}}" wx:key="item">
       <swiper-item data-post-id="{{item.postId}}" catchtap='goDetail'>
         <image src="{{item.imgSrc}}" class="slide-image" />

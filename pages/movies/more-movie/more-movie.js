@@ -2,18 +2,12 @@
 var app = getApp();
 var utils = require("../../../utils/utils.js"); 
 Page({
-  /**
-   * 页面的初始数据
-   */
   data: {
     pageIndex:0,
     pageSize:20,
     hasMoreData:true,
     movies:[]
   },
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
     this.data.url = app.globalData.doubanBase +this.chooseUrl(options.title);
     // 第一次请求数据
@@ -59,7 +53,7 @@ Page({
       url: self.data.url + "?start=" + pageIndex * pageSize + "&count=" + pageSize,
       method: "GET",
       success: function (res) {
-        var data = utils._normalize(res.data.subjects);
+        var data = utils.normalize(res.data.subjects);
         var movies;
         if(pageIndex===0){
           movies = data

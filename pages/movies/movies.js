@@ -31,7 +31,7 @@ Page({
         var obj = {};
         obj[key] = {
           title: title,
-          movies: utils._normalize(res.data.subjects)
+          movies: utils.normalize(res.data.subjects)
         };
         self.setData(obj)
         // 错误实例

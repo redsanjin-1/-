@@ -1,48 +1,48 @@
 <import src="../stars/stars-tpl.wxml" />
 <!-- header --> 
 <view class='detail-header'>
-  <view class='blur-cover' style='background: url({{image_post}})'></view>
+  <view class='blur-cover' style='background: url({{movie.image_post}})'></view>
   <!-- title -->
-  <view class='movie-title text-overflow'>{{title}}</view>
+  <view class='movie-title text-overflow'>{{movie.title}}</view>
   <!-- country,year -->
   <view class='movie-country-year'>
-    <text class='movie-country'>{{country}}</text>·
-    <text class='movie-year'>{{year}}</text>
+    <text class='movie-country'>{{movie.country}}</text>·
+    <text class='movie-year'>{{movie.year}}</text>
   </view>
   <!-- likes,comments -->
   <view class='movie-likes-comments'>
-    <text class='movie-likes-count'>{{ratings_count}}</text>人喜欢
-    <text class='movie-comments-count'>{{comments_count}}</text>条评论
+    <text class='movie-likes-count'>{{movie.ratings_count}}</text>人喜欢
+    <text class='movie-comments-count'>{{movie.comments_count}}</text>条评论
   </view>
   <!-- post -->
-  <image class='movie-post' src="{{image_post}}" data-src="{{image_post}}" catchtap="onMoviePostTap"></image>
+  <image class='movie-post' src="{{movie.image_post}}" data-src="{{movie.image_post}}" catchtap="onMoviePostTap"></image>
 </view>
 <!-- info -->
 <view class='movie-info'>
-  <view class='movie-originalTitle'>{{originalTitle}}</view>
+  <view class='movie-originalTitle'>{{movie.originalTitle}}</view>
   <view class='movie-stars'>
     <text class='section-name'>评分</text>
-    <template is='starsTpl' data='{{...stars}}'></template>
+    <template is='starsTpl' data='{{...movie.stars}}'></template>
   </view>
   <view class='movie-directors'>
-    <text class='section-name'>导演</text> {{directors}}
+    <text class='section-name'>导演</text> {{movie.directors}}
   </view>
   <view class='movie-casts'>
-    <text class='section-name'>影人</text> {{casts}}
+    <text class='section-name'>影人</text> {{movie.casts}}
   </view>
   <view class='movie-genres'>
-    <text class='section-name'>类型</text> {{genres}}
+    <text class='section-name'>类型</text> {{movie.genres}}
   </view>
 </view>
 <!-- summary -->
 <view class='movie-summary'>
-  <view class='section-name'>剧情简介</view>{{summary}}
+  <view class='section-name'>剧情简介</view>{{movie.summary}}
 </view>
 <!-- casts-post -->
 <view class='movie-casts-post'>
   <view class='section-name'>影人</view>
   <view class='post-body' catchtap='onMovieCastsTap'>
-    <block wx:for="{{castsArr}}" wx:for-item="item" wx:key="index">
+    <block wx:for="{{movie.castsArr}}" wx:for-item="item" wx:key="index">
       <image src="{{item.avatar}}" class='casts-avatar' data-src="{{item.avatar}}"></image>
     </block>
   </view>
