@@ -9,7 +9,7 @@ Page({
     "searchMovies": {},
     "searchValue":""
   },
-  onLoad: function () {
+  onReady: function () {
     let url0 = app.globalData.doubanBase + "/v2/movie/in_theaters?start=0&count=3";
     let url1 = app.globalData.doubanBase + "/v2/movie/coming_soon?start=0&count=3";
     let url2 = app.globalData.doubanBase + "/v2/movie/top250?start=0&count=3";

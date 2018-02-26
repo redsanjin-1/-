@@ -6,17 +6,34 @@ Page({
   },
   onLoad: function (option) {
     let id = option.postId;
-    let postData = postsData.postList[id];
-    let isPlayingMusic = this.checkMusicPlaying();
-    app.globalData.g_currentMusicPostId = id;
 
-    this.musicEventBind();
-    this.checkCollection(id);
-    this.setData({
-      postData: postData,
-      id: id,
-      isPlayingMusic: isPlayingMusic
+    wx.setStorage({
+      key: 'postDetailId',
+      data: id
     });
+    wx.setNavigationBarTitle({
+      title: '文章详情'
+    })
+  },
+  onReady:function(){
+    let self = this;
+    wx.getStorage({
+      key: 'postDetailId',
+      success: function(res) {
+        let id = res.data;
+        let postData = postsData.postList[id];
+        let isPlayingMusic = self.checkMusicPlaying(id);
+        app.globalData.g_currentMusicPostId = id;
+
+        self.musicEventBind();
+        self.checkCollection(id);
+        self.setData({
+          postData: postData,
+          id: id,
+          isPlayingMusic: isPlayingMusic
+        });
+      },
+    })
   },
   // 点击音乐播放事件
   onPlayMusic: function () {

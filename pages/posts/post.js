@@ -1,8 +1,13 @@
 var postData = require("../../data/posts-data.js");
-Page({
+Page({ 
   data: {
   },
   onLoad: function () {
+    wx.setNavigationBarTitle({
+      title: '文章'
+    })
+  },
+  onReady:function(){
     var swiperList = [];
     postData.postList.forEach(function (item) {
       swiperList.push({
