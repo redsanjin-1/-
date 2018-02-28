@@ -7,7 +7,13 @@
 * [功能介绍](#功能介绍)  
 
 ## 预览
-![](http://p4v5t5a1b.bkt.clouddn.com/wechat/wechat.gif)  
+**文章预览：**  
+
+![](http://p4v5t5a1b.bkt.clouddn.com/wechat/1.gif)  
+
+**电影预览：**  
+
+![](http://p4v5t5a1b.bkt.clouddn.com/wechat/2.gif)
 
 ## 项目简介
 项目介绍：入门编写一个微信小程序，使用 [豆瓣api](https://developers.douban.com/wiki/?title=api_v2) 获取 数据，由于接口调用次数有限,  
